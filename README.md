@@ -15,9 +15,9 @@ python manage.py runserver
 To run this script as a docker container, clone this repo and run the following while being in the repo directory 
 
 ```python
-docker build -t Django-app . 
+docker build -t mydjango . 
 
-docker run --name app -p 8000:8000 Django-app
+docker run --name app -p 8000:8000 pavangunda66/mydjango
 
 ```
 
