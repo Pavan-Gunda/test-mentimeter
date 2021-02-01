@@ -30,6 +30,6 @@ kubectl apply -f Service.yml
 
 ```
 and browse <ip-address>:8000 or localhost:8000
-## To-dos
+## To-dos for being prod ready 
 
 1: should use Nginx or Gunicorn as the webserver.
