@@ -36,4 +36,3 @@ and browse <ip-address>:8000 or localhost:8000
 
 ![img-1](pagu.PNG)
 
-![Screenshot](pagu.PNG)
