@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+   <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    </head>
+    <body>
+      <h1>{{response.question}}</h1>
+    <canvas id="bar-chart" width="800" height="450" ></canvas>
+    {{ resss|json_script:'name'}}
+      <script>
+        var dump2 = JSON.parse(document.getElementById('name').textContent)
+        
+var n = dump2['results'].length
+var labelList = [];
+var scoreList=[];
+for (i=0; i<n ; i++)
+{
+var stuff = dump2["results"][i]
+labelList.push(stuff.label.toString());
+}
+for (i=0; i<n ; i++)
+{
+var stuff = dump2["results"][i]
+scoreList.push(parseInt(stuff.score,10));
+}
+
+
+
+        new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: labelList,
+      datasets: [
+        {
+          label: "",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+          data: scoreList
+        }
+      ]
+    },
+    options: {
+            responsive: false,
+            maintainAspectRatio: false,
+
+
+      scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+
+    }
+});
+
+      </script>
+    </body>
+  </html>
