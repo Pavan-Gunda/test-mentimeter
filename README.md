@@ -33,3 +33,5 @@ and browse <ip-address>:8000 or localhost:8000
 ## To-dos for being prod ready 
 
 1: should use Nginx or Gunicorn as the webserver.
+
+![img-1](pagu.png)
